@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.logo {
+    will-change: filter;
+    transition: filter 300ms ease;
+}
+
+.logo-vite:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo-elm:hover {
+    filter: drop-shadow(0 0 2em #1293d8);
+}
+
+.logo-daisy:hover {
+    filter: drop-shadow(0 0 2em #ffca30);
+}
