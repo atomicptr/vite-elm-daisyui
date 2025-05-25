@@ -31,7 +31,11 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         CounterMsg counter_message ->
-            ( { model | counter = Counter.update counter_message model.counter }, updateCounter <| model.counter + 1 )
+            let
+                counter =
+                    Counter.update counter_message model.counter
+            in
+            ( { model | counter = counter }, updateCounter counter )
 
 
 view : Model -> Document Msg
